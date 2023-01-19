@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>website Design </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/home.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .container {
+            background-image:linear-gradient(30deg,rgba(194, 98, 98, 0.3),rgba(17, 17, 16, 0.2)), url('img/bg2.jpg');
+            height: 100vh;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            width:100%;
+            
+        }
+    </style>
+</head>
+
+<body onload="slider()">
+
+    <div class="menu">
+        <div class="wrapper">
+            <div class="logo ">
+                <img src="img/logo.jpg " alt=" ">
+            </div>
+            <nav class="navigation">
+                <ul class="nav-area">
+                         
+                    <li><div class="dropdown">
+                        <a class="but-home"  data-toggle="dropdown">Home
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Home1</a></li>
+                          <li><a href="#">Home2</a></li>
+                          <li><a href="#">Home3</a></li>
+                        </ul></div></li>
+                    <li><a href="#about1">About</a></li>
+                    <li><a href="#Courses">Courses</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+                </div>
+    </div>
+    <div class="container">
+        <div class="welcome-text">
+            <h1>We are Creative</h1>
+            <a href="#">Contact US</a>
+        </div>
+    </div>
+    
+<div id="about1">
+      <div class="about">ABOUT</div>
+    <div class="parent">
+        <div class="right">
+            <div class="full float-right_img">
+                <img src="img/img9.png" alt="#" />
+            </div>
+        </div>
+        <div class="left  ">
+            <div class="heading_main text_align_left">
+                <span>WELCOME TO EDUCATION</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <a class="hvr-radial-out button-theme" href="#">About more</a>
+        </div>
+    </div>
+    <section id="feature">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-thumb">
+                        <span>01</span>
+                        <h3>Trending Courses</h3>
+                        <p>Known is free education HTML Bootstrap Template. You can modify in any way and use this for
+                            your website.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-thumb">
+                        <span>02</span>
+                        <h3>Books & Library</h3>
+                        <p>You are allowed to use Known HTML Template for your commercial or non-commercial websites.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-thumb">
+                        <span>03</span>
+                        <h3>Certified Teachers</h3>
+                        <p>Please spread a word about us. Template redistribution is NOT allowed on any download
+                            website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="course">COURSES</div>
+<div class="Banner">
+    <div class="slider" id="sliderImg">
+        <div class="content">
+    <h1> WEB DESIGN</h1>
+    <p>Using Angular</p>
+    </div>
+     </div>
+     <div class="overlay">
+     </div>
+</div>
+<h1>PORTFOLIO</h1>
+<div id="top" class="hero background-overlay">
+    <div class="hero-content">
+        <h1>I am John Smith</h1>
+        <p class="hero-job"><span>I'M A CREATIVE WEB DEVELOPER</span></p>
+        <p class="hero-job-desc">I STAND ON A SWEET SPOT WHERE DESIGN &amp; CODE INTERSECTS. </p>
+
+    </div><!-- /.hero-content -->
+
+    <div class="hero-arrow page-scroll home-arrow-down">
+        <a class="" href="#intro"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+    </div><!-- /.hero-arrow -->
+
+</div><!-- /.hero -->
+
+<script>
+    var slideImg=document.getElementById("sliderImg");
+    var img=new Array(
+    'img/course1.jpg',
+    'img/course2.jpg',
+    'img/course3.jpg'
+    );
+    var len=img.length;
+    var i=0;
+
+    function slider(){
+        if(i>len-1){
+            i=0;
+        }
+        slideImg.style.backgroundImage='url('+img[i]+')';
+console.log(slideImg);
+console.log(img[i]);
+        slideImg.style.backgroundColor="green";
+        i++;
+        setTimeout('slider()',3000);
+        }
+</script>
+</body>
+</html>
